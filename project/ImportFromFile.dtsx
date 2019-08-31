@@ -1,0 +1,1015 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/19/2017 2:45:53 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SONIA010"
+  DTS:CreatorName="SONIA010\lsayegh"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{74ED23B6-CA31-4171-AAE4-3C78FD6C9FAC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.0500.272"
+  DTS:LocaleID="6153"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="ImportFromFile"
+  DTS:VersionGUID="{0623A64F-67E3-4294-93FE-70EED9DD1538}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C10A9FE8-C7EB-4D91-8032-5C62D9FB5696}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.\sql2016dev;Initial Catalog=Gorilla2.0;Provider=SQLNCLI;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{41BA5F6F-9C26-43C4-9F6F-CE7E2A7D107F}"
+      DTS:ObjectName="SourceConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="6153"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="F:\Projects\Gorilla2.0\WinningNumbers.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="No "
+              DTS:DTSID="{655396ED-8593-4A69-A76E-96B98B45B7FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Day"
+              DTS:DTSID="{6C1C95B8-2AE8-4210-B496-1B6B5A2E3D4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DD"
+              DTS:DTSID="{A6749677-F198-4C93-BD93-81E2361BD1B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MMM"
+              DTS:DTSID="{DE024647-476D-4315-86EF-706B900963C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YYYY"
+              DTS:DTSID="{6406C17F-EC18-4A38-B215-A4DF104036F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" N1"
+              DTS:DTSID="{4ACBE467-62DF-4B22-A1D0-53083AD18A1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="N2"
+              DTS:DTSID="{1C477CC9-0F5E-40FA-ACC2-7BB845AF1121}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="N3"
+              DTS:DTSID="{D944BC1A-6191-46D2-98FB-8AA9505ACCA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="N4"
+              DTS:DTSID="{D69B1839-486F-4F83-A72A-6A16691A9725}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="N5"
+              DTS:DTSID="{C607647A-8724-4D4A-812C-E27F976A4F91}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="L1"
+              DTS:DTSID="{4BA390AE-9136-49B7-9D61-2CDE030D2FBA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="L2"
+              DTS:DTSID="{014BEB5A-F3E7-49D9-9BE5-DC092B9D1F0A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="  Jackpot"
+              DTS:DTSID="{682BCAA8-B349-4269-89C4-E9117B18D1D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="   Wins"
+              DTS:DTSID="{B87AAA04-C4D4-4FBF-AF7D-0EBB35CEFA78}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{8AA459FD-9E88-47FD-BC06-392F67966D11}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Destination - WinningNumbers"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination - WinningNumbers"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[WinningNumbers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - WinningNumbers.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[No ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="No "
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[No ]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[No ]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[ Day]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" Day"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[ Day]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[ Day]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[DD]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DD"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[DD]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[DD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[MMM]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MMM"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[MMM]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[MMM]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[YYYY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="YYYY"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[YYYY]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[YYYY]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[ N1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName=" N1"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[ N1]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[ N1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[N2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="N2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[N2]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[N3]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="N3"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[N3]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N3]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[N4]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="N4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[N4]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N4]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[N5]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="N5"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[N5]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N5]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[L1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="L1"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[L1]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[L1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[L2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="L2"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[L2]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[L2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[  Jackpot]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="  Jackpot"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[Jackpot]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[  Jackpot]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].Columns[   Wins]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="   Wins"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[Wins]"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[   Wins]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[No ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="No " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[ Day]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" Day" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[DD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[MMM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MMM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[YYYY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="YYYY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[ N1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" N1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[N2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="N2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[N3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="N3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[N4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="N4" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[N5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="N5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[L1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="L1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[L2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="L2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[Jackpot]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Jackpot" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input].ExternalColumns[Wins]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      name="Wins" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Destination - WinningNumbers.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - WinningNumbers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Destination - WinningNumbers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Destination - WinningNumbers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - WinningNumbers_txt"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="6153"
+              name="Source - WinningNumbers_txt"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[No ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[No ]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[No ]"
+                      name="No "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[ Day]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[ Day]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[ Day]"
+                      name=" Day"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[DD]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[DD]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[DD]"
+                      name="DD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[MMM]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[MMM]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[MMM]"
+                      name="MMM"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[YYYY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[YYYY]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[YYYY]"
+                      name="YYYY"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[ N1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[ N1]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[ N1]"
+                      name=" N1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[N2]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N2]"
+                      name="N2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N3]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[N3]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N3]"
+                      name="N3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N4]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[N4]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N4]"
+                      name="N4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N5]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[N5]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[N5]"
+                      name="N5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[L1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[L1]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[L1]"
+                      name="L1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[L2]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[L2]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[L2]"
+                      name="L2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[  Jackpot]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[  Jackpot]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[  Jackpot]"
+                      name="  Jackpot"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[   Wins]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[   Wins]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].Columns[   Wins]"
+                      name="   Wins"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[No ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="No " />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[ Day]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" Day" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[DD]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[MMM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MMM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[YYYY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="YYYY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[ N1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name=" N1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[N2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="N2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[N3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="N3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[N4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="N4" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[N5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="N5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[L1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="L1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[L2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="L2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[  Jackpot]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="  Jackpot" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output].ExternalColumns[   Wins]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="   Wins" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task 1\Destination - WinningNumbers.Inputs[Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task 1\Source - WinningNumbers_txt.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Drop table(s) SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{5DA16B7B-DA90-4CCD-9325-4FC9C867F21B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Drop table(s) SQL Task 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server vNext CTP2.0; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C10A9FE8-C7EB-4D91-8032-5C62D9FB5696}"
+          SQLTask:SqlStatementSource="drop table [dbo].[WinningNumbers]&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Preparation SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{61FCE016-5124-4E54-8A70-B5B97A082C9E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Preparation SQL Task 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server vNext CTP2.0; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C10A9FE8-C7EB-4D91-8032-5C62D9FB5696}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[WinningNumbers] (&#xA;[No ] varchar(50),&#xA;[ Day] varchar(50),&#xA;[DD] varchar(50),&#xA;[MMM] varchar(50),&#xA;[YYYY] varchar(50),&#xA;[ N1] varchar(50),&#xA;[N2] varchar(128),&#xA;[N3] varchar(128),&#xA;[N4] varchar(128),&#xA;[N5] varchar(128),&#xA;[L1] varchar(128),&#xA;[L2] varchar(128),&#xA;[Jackpot] varchar(128),&#xA;[Wins] varchar(128)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{A722B03D-5B49-42B0-B58A-A571C22BCD9A\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{A722B03D-5B49-42B0-B58A-A571C22BCD9A}"
+      DTS:From="Package\Drop table(s) SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{A722B03D-5B49-42B0-B58A-A571C22BCD9A}"
+      DTS:To="Package\Preparation SQL Task 1"
+      DTS:Value="2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{BB12CD8C-3211-4114-8BF5-DCBC07AF1E9D\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{BB12CD8C-3211-4114-8BF5-DCBC07AF1E9D}"
+      DTS:From="Package\Preparation SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{BB12CD8C-3211-4114-8BF5-DCBC07AF1E9D}"
+      DTS:To="Package\Data Flow Task 1" />
+  </DTS:PrecedenceConstraints>
+</DTS:Executable>

@@ -1,0 +1,21 @@
+-------------------------------------------------------
+<<<Summary>>>
+#1 Scrape data from websites
+	F:\Gorilla\scrape1.xlsm
+#2 Upload scraped data into raw tables
+	F:\Gorilla\code\02. ExcelToSQL.sql
+#3 Extract and transform raw data into staging tables. Usable data is in centralised table (e.g. mersey.draw, raw.draw)
+	F:\Gorilla\code\03. raw2temp.sql
+	F:\Gorilla\code\04. temp2staging.sql
+#4 Move staging data into target tables
+--------------------------------------------------------
+
+[Tasks]
+1) Automate data scraping
+2) Complete draw data
+3) Process merseyside data
+4) Extract breakdown from raw
+5) mersey
+	* data scrape again
+	* winning numbers
+	* draw comments

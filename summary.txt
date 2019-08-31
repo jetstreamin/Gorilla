@@ -1,0 +1,55 @@
+- summary 
+	+ drawnumber, balls, lucky
+	+ number of entries
+	+ machine name used
+	+ ball set used
+	
+- ireland
+	+ regular draw
+	+ raffle code (10)
+	+ euromillion plus (5 numbers from 1-50, m5,m4,m3)
+	+ 90 days prize claim period
+	
+- uk
+	+ regular draw
+	+ 180 days prize claim period
+	+ UK millionnaire maker codes (2)
+	+ Euromillions Hotpicks (5 numbers from 1-50, m5,m4,m3,m2,m1)
+
+- france
+	+ regular draw
+	+ etoile prizes
+	+ 60 days prize claim period
+	+ My million code (1)
+
+- spain
+	+ regular draw
+	+ 90 days prize claim period
+	+ El millon code (1)
+
+- portugal
+	+ regular draw
+	+ 90 days prize claim period
+	+ M1lhão code (1)
+	
+- switzerland
+	+ regular draw
+	+ 180 days prize claim period
+	+ Super star code (1, match by letter)
+	+ Second change (5 numbers from 1-50,m5,m4,m3)
+	
+- belgium
+	+ regular draw
+	+ 140 days prize claim period
+	+ Joker code (400 for fixed price)
+	
+- austria
+	+ regular draw
+	+ 3 year prize claim period
+	+ Joker code (1 6-digits code, match by order, draw on wed and sun)
+	
+- luxembourg
+	+ regular draw
+	+ 60 days prize claim period
+	+ Joker code (1 6-digits code, match by order, draw on wed and sun)
+	+ Extra lux (5 numbers from 1-50,m5,m4,m3)

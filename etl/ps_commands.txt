@@ -1,0 +1,11 @@
+--Powershell version
+$PSVersionTable.psversion
+
+--See current execution policy
+Get-ExecutionPolicy
+
+--Change Execution Policy to RemoteSigned
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+--Change scope to current user
+Set-ExecutionPolicy -Scope CurrentUser

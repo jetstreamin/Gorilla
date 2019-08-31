@@ -1,0 +1,54 @@
+Sub Macro1()
+    Dim NewFileName As String
+    Dim NewFileType As String
+    Dim x As Integer
+    Dim myRow As Integer
+    Dim myURL As String
+    Dim myCurrentDateTime As String
+    Dim myDir As String
+   
+    NewFileType = "*.xlsx"
+    Worksheets("test").Select
+    Worksheets("test").Activate
+    myDir = "H:\test\"
+    
+    For x = 1 To 5
+        myRow = x + 1
+        myURL = "URL;" & Cells(myRow, 4)
+        NewFileName = Cells(myRow, 3)
+        Worksheets.Add(After:=Worksheets(Worksheets.Count)).Name = NewFileName
+        myCurrentDateTime = Format(Now(), "yyyy-MM-dd hh:mm:ss")
+        With ActiveSheet.QueryTables.Add(Connection:=myURL, Destination:=Range("$A$2"))
+            '.CommandType = 0
+            .Name = NewFileName
+            .FieldNames = True
+            .RowNumbers = False
+            .FillAdjacentFormulas = False
+            .PreserveFormatting = True
+            .RefreshOnFileOpen = False
+            .BackgroundQuery = True
+            .RefreshStyle = xlInsertDeleteCells
+            .SavePassword = False
+            .SaveData = True
+            .AdjustColumnWidth = True
+            .RefreshPeriod = 0
+            .WebSelectionType = xlEntirePage
+            .WebFormatting = xlWebFormattingNone
+            .WebPreFormattedTextToColumns = True
+            .WebConsecutiveDelimitersAsOne = True
+            .WebSingleBlockTextImport = False
+            .WebDisableDateRecognition = False
+            .WebDisableRedirections = False
+            .Refresh BackgroundQuery:=False
+        End With
+        Sheets(NewFileName).Select
+        Sheets(NewFileName).Move
+        Cells(1, 1) = myCurrentDateTime
+        NewFileName = myDir & NewFileName
+        ChDir myDir
+        ActiveWorkbook.SaveAs Filename:=NewFileName, FileFormat:=xlOpenXMLWorkbook, CreateBackup:=False
+        ActiveWindow.Close
+   
+    Next x
+    
+End Sub
